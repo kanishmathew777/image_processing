@@ -1,0 +1,95 @@
+<div class="class-forms">
+    <form #contourForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-content">
+            <div class="div_wrapper">
+                <label for="join_line">Join Lines</label>
+                <div id="join_line" class="form-group option-class">
+                    <input id="join_lines" type="radio" name="join_lines" [(ngModel)]="contour_modal.join_lines" [value]="true">True
+                    <br>
+                    <input id="join_lines" type="radio" name="join_lines" [(ngModel)]="contour_modal.join_lines" [value]="false">False
+                    <br>
+                </div>
+            </div>
+
+            <div class="form-group form-allignment">
+                <label for="kernal">Kernal</label>
+                <input id="kernal" type="number" min="0" max="25" class="form-control" name="kernal-1" [(ngModel)]="contour_modal.kernal"
+                    #kernalnew="ngModel" required>
+                <div *ngIf="kernalnew.invalid && (kernalnew.dirty || kernalnew.touched)" class="alert alert-danger">
+                    <div *ngIf="kernalnew.errors.required">
+                        Required.
+                    </div>
+                    <div *ngIf="kernalnew.errors.min">
+                        Kernal must be greater than 0.
+                    </div>
+                    <div *ngIf="kernalnew.errors.kernal">
+                        Kernal must be odd.
+                    </div>
+                </div>
+            </div>
+
+            <div class="div_wrapper">
+                <label for="approx">Approx</label>
+                <select [(ngModel)]="contour_modal.approximation_method" name="approximation" id="approx" class="option-class">
+                    <option *ngFor="let item of approximations | keyvalue" [ngValue]="item.value" id="approx">{{item.key}}</option>
+                </select>
+            </div>
+
+            <div class="div_wrapper">
+                <label for="retrievelmode">Retreivel Mode</label>
+                <select [(ngModel)]="contour_modal.retrievelmode" name="retrievelmode" id="retrievelmode" class="option-class">
+                    <option *ngFor="let item of retrievelmodes | keyvalue" [ngValue]="item.value" id="approx">{{item.key}}</option>
+                </select>
+            </div>
+
+            <div class="div_wrapper">
+                <label for="threshold">Thresholding</label>
+                <select [(ngModel)]="contour_modal.thresholding" name="threshold" id="threshold" class="option-class">
+                    <option *ngFor="let item of thresholdings | keyvalue" [ngValue]="item.value" id="approx">{{item.key}}</option>
+                </select>
+            </div>
+
+            <div class="div_wrapper">
+                <label for="contour">Contour Options</label>
+                <div id="contour">
+                    <div class="form-group form-allignment">
+                        <label for="contour_index">Index</label>
+                        <input id="contour_index" type="number" min="-1" max="1500" class="form-control" name="contour_index" [(ngModel)]="contour_modal.contour.index">
+                    </div>
+                    <div class="form-group form-allignment">
+                        <label for="contour_thickness">Thickness</label>
+                        <input id="contour_thickness" type="number" min="1" max="1500" class="form-control" name="contour_thickness" [(ngModel)]="contour_modal.contour.thickness">
+                    </div>
+                    <div class="form-group form-allignment">
+                        <label for="contour_color">Color</label>
+                        <div id="contour_color" class="color-wrapper">
+                            <label for="contour_color_red">Red</label>
+                            <input id="contour_color_red" type="number" min="0" max="255" class="form-control contor-color-style" name="contour_color_red"
+                                [(ngModel)]="contour_modal.contour.color.red">
+                            <label for="contour_color_green">Green</label>
+                            <input id="contour_color_green" type="number" min="0" max="255" class="form-control contor-color-style" name="contour_color_green"
+                                [(ngModel)]="contour_modal.contour.color.green">
+                            <label for="contour_color_blue">Blue</label>
+                            <input id="contour_color_blue" type="number" min="0" max="255" class="form-control contor-color-style" name="contour_color_blue"
+                                [(ngModel)]="contour_modal.contour.color.blue">
+                        </div>
+                    </div>
+                    <div class="div_wrapper">
+                        <label for="reverse_sort">Reverse Sort</label>
+                        <div id="reverse_sort" class="form-group option-class">
+                            <input id="reverse_sorts" type="radio" name="reverse_sorts" [(ngModel)]="contour_modal.contour.sort_reverse" [value]="true">True
+                            <br>
+                            <input id="reverse_sorts" type="radio" name="reverse_sorts" [(ngModel)]="contour_modal.contour.sort_reverse" [value]="false">False
+                            <br>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 10px">
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+        <!-- <pre>{{ contourForm.value | json }}</pre> -->
+    </form>
+</div>

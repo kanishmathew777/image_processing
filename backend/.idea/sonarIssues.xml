@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/fragment.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/image_processing_backend/image_processing_backend/settings.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/image_processing_backend/image_processing_backend/urls.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/image_processing_backend/opencv_oprtns/serializers.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/image_processing_backend/opencv_oprtns/urls.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/image_processing_backend/opencv_oprtns/views.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/login_project/admin.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/login_project/login_project/settings.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/login_project/login_project/urls.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/login_project/user_login/urls.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/login_project/user_login/views.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/requirements.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/localisation/crop_output.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/low_quality_processing/image_character_cropping.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/low_quality_processing/image_utils.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/low_quality_processing/padding_output_json.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/perdict_updated.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/tasks.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/views.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/icr_backend/settings/common.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/icr_backend/settings/development.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/icr_backend/settings/production.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/icr_backend/settings/settings.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/icr_new_approach/csv_read/csv_write.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/icr_new_approach/csv_read/dict.csv">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

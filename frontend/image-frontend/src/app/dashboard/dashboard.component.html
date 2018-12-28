@@ -1,0 +1,68 @@
+<button (click)="toggle()" id="burger_button"><img src="../assets/images/512.png" alt="image" class="menu_image"></button>
+<mat-sidenav-container class="example-container" (backdropClick)="close()">
+  <mat-sidenav #sidenav class="sidenav_content" mode="over" (keydown.escape)="close()" disableClose>
+    <div class="side_div_contents">
+      <app-nav-bar></app-nav-bar>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content class="main_content">
+    <div class="menu_bar">
+    </div>
+    <div class="file-upload-download">
+      <label for="avatar" class="custom-file-upload">
+        Upload file
+        <input #fileInput type="file" id="avatar" accept="image/* | application/pdf" name="photo" (change)="onFileChange($event)">
+      </label>
+      <label for="avatar" class="custom-file-download">
+        <a href="{{ processed_image }}" download>Download file</a>
+      </label>
+    </div>
+    <div class="image-operation-selection">
+      <b>Image Processing Options: </b>
+      <div *ngFor="let oprtn of operation_selections" class="operation_bar">
+        <label for="oprtn_{{ oprtn }}">
+          <input id="oprtn_{{ oprtn }}" type="radio" value="{{ oprtn }}" name="oprtn-selction" (click)="operation_selection($event)"
+            style="margin-left: 30px" checked="{{ default_check(oprtn) }}"> {{ OptionName(oprtn) }}
+        </label>
+      </div>
+    </div>
+    <!-- <router-outlet></router-outlet> -->
+    <div *ngIf="navcomponent">
+      <div *ngIf="check(navcomponent, operation_selections[0])">
+        <contour_detection [file]=file_content (output_image)="receiveMessage($event)"></contour_detection>
+      </div>
+      <div *ngIf="check(navcomponent, operation_selections[1])">
+        <horizontal_lines [file]=file_content (output_image)="receiveMessage($event)"></horizontal_lines>
+      </div>
+      <div *ngIf="check(navcomponent, operation_selections[2])">
+        <vertical_lines [file]=file_content (output_image)="receiveMessage($event)"></vertical_lines>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="leftcolumn">
+        <div class="input_image_container">
+          <div id="image-file">
+            <img *ngIf="!enableTiff" class="form-image" alt="logo" />
+          </div>
+
+          <!-- <div *ngIf="image_file;else defaultimage">
+            <img [src]="image_file">
+          </div>
+          <ng-template #defaultimage>
+            <img [src]="default_image">
+          </ng-template> -->
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="input_image_container">
+          <div *ngIf="processed_image;else defaulttext">
+            <img [src]="processed_image">
+          </div>
+          <ng-template #defaulttext>
+            <div><b> Output Result </b></div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
