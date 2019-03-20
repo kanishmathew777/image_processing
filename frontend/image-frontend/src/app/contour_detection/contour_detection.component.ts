@@ -37,13 +37,15 @@ export class ContourComponent implements OnInit {
   }
   thresholdings = {
     'THRESH_BINARY': 0, 'THRESH_BINARY_INV': 1, 'THRESH_TRUNC': 2, 'THRESH_TOZERO': 3,
-    'THRESH_TOZERO_INV': 4, 'THRESH_MASK': 7, 'THRESH_OTSU': 8
+    'THRESH_TOZERO_INV': 4, 'THRESH_MASK': 7, 'THRESH_OTSU': 8, 'THRESH_BINARY_INV+THRESH_OTSU': 9
   }
 
 
-  contour_modal = new Contour(false, 3, 3, 1, 1,
-    ({ index: 1, thickness: 15, sort_reverse: true, 
-      color: { red: 64, blue: 186, green: 201 } }));
+  contour_modal = new Contour(false, 3, 9, 1, 0,
+    ({
+      index: 1, thickness: 3, sort_reverse: true,
+      color: { red: 64, blue: 186, green: 201 }
+    }));
 
 
   ngOnInit() {
@@ -60,7 +62,7 @@ export class ContourComponent implements OnInit {
 
   onSubmit() {
     console.log(this.file)
-    if (!this.file){
+    if (!this.file) {
       this.toaster.error('Please upload a file', 'File Not Uploaded');
       return
     }
@@ -68,7 +70,7 @@ export class ContourComponent implements OnInit {
     let formData = new FormData();
     formData.append("file", this.file);
     formData.append("name", this.file.name);
-    for (let [key, values] of Object.entries(this.contour_modal)){
+    for (let [key, values] of Object.entries(this.contour_modal)) {
       formData.append(key, JSON.stringify(values))
     }
     this.contourservice.contour_detection(formData)
@@ -76,13 +78,20 @@ export class ContourComponent implements OnInit {
         response => {
           this.response = response;
           this.output_image.emit(this.response.output_image)
-          this.toaster.success(`Detected ${this.response.no_contours} contours`, 'Contour detection Successfull' )
+          // this.toaster.success(`Detected ${this.response.no_contours} contours`, 'Contour detection Successfull')
         },
         error => {
-        this.errors = error;
+          this.errors = error;
           console.log(this.errors)
           this.output_image.emit(null)
           this.toaster.error(this.errors.error, 'Error Occured');
         })
   }
+
+  keyDownFunction(event) {
+    if(event.keyCode == 13) {
+      this.onSubmit()
+    }
+  }
+
 }

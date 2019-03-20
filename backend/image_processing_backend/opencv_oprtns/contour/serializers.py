@@ -27,6 +27,8 @@ thresholding_choices = (
 
     (7, cv2.THRESH_MASK),
     (8, cv2.THRESH_OTSU),
+
+    (9, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
 )
 
 

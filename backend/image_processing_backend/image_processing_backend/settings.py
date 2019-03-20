@@ -84,6 +84,8 @@ DATABASES = {
     }
 }
 
+WSGI_APPLICATION = 'image_processing_backend.wsgi.application'
+
 #cors
 
 CORS_ORIGIN_ALLOW_ALL = True

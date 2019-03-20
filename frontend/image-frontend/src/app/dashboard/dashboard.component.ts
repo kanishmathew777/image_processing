@@ -34,6 +34,7 @@ export class DashboardComponent implements OnInit {
   }
 
   @ViewChild('sidenav') sidenav: MatSidenav;
+  @ViewChild('fileInput') fileInput : any;
 
   constructor() { }
 
@@ -52,17 +53,22 @@ export class DashboardComponent implements OnInit {
   /* upload image */
   onFileChange(event) {
     this.image_file = null
+    this.enableTiff = false
     if (event.target.files.length > 0) {
       let files = event.target.files;
       if (files) {
         let reader = new FileReader();
         reader.onload = (e: any) => {
           this.image_file = e.target.result;
-          this.display_tiff(this.image_file)
+          if ((e.target.result.split(';')[0].split(':')[1]) === 'image/tiff') {
+            this.display_tiff(this.image_file)
+          }
         }
         this.file_content = event.target.files[0];
         reader.readAsDataURL(files[0]);
       }
+      this.fileInput.nativeElement.value = '';
+      this.processed_image = null
     }
   }
 
@@ -79,7 +85,6 @@ export class DashboardComponent implements OnInit {
       document.getElementsByTagName('canvas')[0].style.height = "100%";
     };
     xhr.send();
-
   }
 
   /* default option checked */

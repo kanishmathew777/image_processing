@@ -1,5 +1,5 @@
 <div class="class-forms">
-    <form #contourForm="ngForm" (ngSubmit)="onSubmit()">
+    <form #contourForm="ngForm" (ngSubmit)="onSubmit()" (keydown)="keyDownFunction($event)">
         <div class="form-content">
             <div class="div_wrapper">
                 <label for="join_line">Join Lines</label>

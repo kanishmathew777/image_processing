@@ -3,7 +3,437 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="/fragment.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../TableTennisTournament/TableTennisProject/TableTennisProject/settings.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../TableTennisTournament/TableTennisProject/TableTennisProject/urls.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../TableTennisTournament/TableTennisProject/TeamMatches/__init__.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../TableTennisTournament/TableTennisProject/TeamMatches/admin.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../TableTennisTournament/TableTennisProject/TeamMatches/apps.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../TableTennisTournament/TableTennisProject/TeamMatches/migrations/0004_auto_20190117_1354.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../TableTennisTournament/TableTennisProject/TeamMatches/models.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../TableTennisTournament/TableTennisProject/TeamMatches/receiver.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../TableTennisTournament/TableTennisProject/TeamMatches/serializers.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../TableTennisTournament/TableTennisProject/TeamMatches/signals.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../TableTennisTournament/TableTennisProject/TeamMatches/views.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../TableTennisTournament/TableTennisProject/Users/models.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../TableTennisTournament/TableTennisProject/Users/views.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../handwritten_rcgntion/handwritten-text-recognition-for-apache-mxnet-master/ocr/evaluate_cer.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../handwritten_rcgntion/handwritten-text-recognition-for-apache-mxnet-master/ocr/new_evaluate.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../handwritten_rcgntion/handwritten-text-recognition-for-apache-mxnet-master/ocr/word_and_line_segmentation.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../handwritten_rcgntion/handwritten-text-recognition-for-apache-mxnet-master/trials/line_word_segmentation.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../handwritten_rcgntion/handwritten-text-recognition-for-apache-mxnet-master/word_segmentation.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/LineSegm-master/python/linesegm/lib/__init__.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/LineSegm-master/python/linesegm/lib/pathfinder.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/LineSegm-master/python/linesegm/main.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/additional_trials/blob_detector.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/additional_trials/bright_spot.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/additional_trials/convert_pdf_to_png.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/additional_trials/convex_hull_contour.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/additional_trials/custom_trials.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/additional_trials/join_hullss.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/additional_trials/paper_approach.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/additional_trials/peaks.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/additional_trials/plant_cv_new.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/additional_trials/platcv.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/additional_trials/plot_threshold.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/additional_trials/pydip.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/additional_trials/scikit.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/additional_trials/watershed.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/amazons3/lambda.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/constants/config_fields_constants.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/constants/config_fields_constants.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/constants/constants.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/constants/dental_deenr_field_names.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/constants/dental_dtf_field_names.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/constants/field_names.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/constants/medical_etf_field_names.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/constants/medical_mmp4_field_names.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/constants/star_kids_field_names.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/constants/star_plus_spenrd_field_names.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/constants/star_plus_spenrm_field_names.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/constants/star_stenrtp_field_names.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/crop_approaches/crop_failure_methods.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/crop_approaches/crop_methods.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/crop_approaches/process_comments.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/cropping_config_file/config_file.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/cropping_config_file/constant_form_names.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/cropping_config_file/dental_deenr.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/cropping_config_file/dental_dtf.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/cropping_config_file/form_names_constants.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/cropping_config_file/medical_etf.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/cropping_config_file/medical_mmp4.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/cropping_config_file/star_kids.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/cropping_config_file/star_plus_spenrd.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/cropping_config_file/star_plus_spenrm.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/cropping_config_file/star_stenr.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/cropping_config_file/star_stenrtp.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/image_preprocessing/image_utils.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/image_preprocessing/preprocessing.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/initial_steps/intial_step.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/process_start/start.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/utils/background_removal.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_approach/utils/image_utils.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_new_approach/color_cmbing/combine_colors.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_new_approach/cropping_vertical_horizontal.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_new_approach/detect_circles/circles.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_new_approach/draw_arc/draw_arc.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_new_approach/edges detection/round_edges.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_new_approach/image_operations.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_new_approach/large_contour_crop/crop.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/cropping_new_approach/sort_contours.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/face_detection/face_detect.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/face_detection/horizontal_line.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/heat_map/contour_center.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/heat_map/contour_plot.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/heat_map/mser_detect.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/heat_map/seaborn_map.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/image_contrast/image_character_cropping.py">
           <value>
             <set />
           </value>
@@ -14,6 +444,41 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/image_processing_backend/urls.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/line_segment/astar.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/line_segment/start_process.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/matlab_wrks/hpp.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/matlab_wrks/mark_points.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/matlab_wrks/opencv_hpp.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/matlab_wrks/scipy_approach.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/opencv_oprtns/contour/image_operations.py">
           <value>
             <set />
           </value>
@@ -34,6 +499,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/opencv_oprtns/image_operations.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/opencv_oprtns/image_processing_looping/image_processing.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/opencv_oprtns/image_processing_looping/steps.py">
           <value>
             <set />
           </value>
@@ -73,12 +548,602 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/pathfinder/find_path.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pathfinder/join.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pathfinder/new_file.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pathfinder/txt_to_image.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_approaches/create_image.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_approaches/find_path.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_approaches/mark_points.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_approaches/scipy_approach.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_path_finder/a_combine.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_path_finder/blank_image.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_path_finder/constants.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_path_finder/path_finder.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_path_finder/scipy.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_width_path_finder/a_cmbine_contours_mask.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_width_path_finder/a_combine.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_width_path_finder/a_combine_new_approach.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_width_path_finder/a_combine_with_left_right_points.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_width_path_finder/crop_non_rectangular.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_width_path_finder/cropping/cropping_non_rectangular.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_width_path_finder/image_preprocessing/denosing.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_width_path_finder/image_preprocessing/image_utils.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_width_path_finder/image_processing.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_width_path_finder/path_finder.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_width_path_finder/polylines_opencv_oprtns.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_width_path_finder/slant_lines_binarised/a_combine_with.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_width_path_finder/slant_lines_binarised/lines_binarised.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_width_path_finder/slant_lines_binarised/lines_left_binarised.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_width_path_finder/slant_lines_binarised/lines_right_binarised.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_width_path_finder/slant_lines_binarised/pathfinder.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_width_path_finder/slant_lines_binarised/polylines_opencv_oprtns.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_width_path_finder/slanted_lines/slant_plot.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_width_path_finder/slanted_lines/slant_plot_left.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scipy_width_path_finder/slanted_lines/slant_plot_right.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/segmentation_words/opencv_approach.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/websocketcnctn/admin.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/websocketcnctn/consumers.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/websocketcnctn/routing.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/websocketcnctn/templates/example/a _base.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/websocketcnctn/templates/example/user_list.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/websocketcnctn/urls.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/websocketcnctn/views.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/GRPC_Projects/grpc/examples/python/image_transfer/client.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/GRPC_Projects/grpc/examples/python/image_transfer/image_transfer_pb2.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/GRPC_Projects/grpc/examples/python/image_transfer/image_transfer_pb2_grpc.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/GRPC_Projects/grpc/examples/python/image_transfer/protos/image_transfer.proto">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/GRPC_Projects/grpc/examples/python/image_transfer/server.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/image_processing_common/crop_approaches/crop_failure_methods.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/image_processing_common/crop_approaches/crop_methods.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/image_processing_common/cropping_config_file/config_file.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/image_processing_common/cropping_config_file/dental_deenr.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/image_processing_common/cropping_config_file/dental_dtf.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/image_processing_common/cropping_config_file/medical_etf.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/image_processing_common/cropping_config_file/medical_mmp4.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/image_processing_common/cropping_config_file/star_kids.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/image_processing_common/cropping_config_file/star_plus_spenrd.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/image_processing_common/cropping_config_file/star_plus_spenrm.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/image_processing_common/cropping_config_file/star_stenr.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/image_processing_common/cropping_config_file/star_stenrtp.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/image_processing_common/image_preprocessing/image_utils.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/image_processing_common/image_preprocessing/preprocessing.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/image_processing_common/utils/image_utils.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/main/image_processing_common/constants/config_fields_constants.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/main/image_processing_common/crop_approaches/crop_failure_methods.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/main/image_processing_common/crop_approaches/crop_methods.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/main/image_processing_common/crop_approaches/crop_sub_methods.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/main/image_processing_common/cropping_config_file/config_file.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/main/image_processing_common/cropping_config_file/medical_mmp4.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/main/image_processing_common/utils/dir_utils.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/main/urls.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/main/views/views.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/requirements.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/signature_analyzer/app/v1/contour_image_crop/manage_cropping.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/signature_analyzer/app/v1/contour_image_crop/module_utils/image_utils.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/signature_analyzer/app/v1/contour_image_crop/pdf_image_conversion.py">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/signature_analyzer/app/v1/views.py">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/star_form/celery_services/star_form_processing_service.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/star_form/image_processing_approach/crop_approaches/crop_failure_methods.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/star_form/image_processing_approach/crop_approaches/crop_methods.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/star_form/image_processing_approach/cropping/crop.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/star_form/image_processing_approach/cropping/start.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/star_form/image_processing_approach/cropping_config_file/dental_deenr.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/star_form/image_processing_approach/cropping_config_file/dental_dtf.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/star_form/image_processing_approach/cropping_config_file/medical_etf.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/star_form/image_processing_approach/cropping_config_file/medical_mmp4.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/star_form/image_processing_approach/image_preprocessing/preprocessing.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/star_form/image_processing_approach/process_start/crop_methods.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/star_form/image_processing_approach/process_start/start.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Maximus/maximus-_poc_form_processing_python/maximus_project/backend/maximus_backend/star_form/image_processing_approach/star_form_cropping/start.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/character_post_cropping.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/constants.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/document_data_extraction/image_preprocessing/image_operations.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/document_data_extraction/image_preprocessing/image_preprocessor.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/document_data_extraction/tasks/crop_boxes.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/fuzzy_string_matching.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/image.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/image_preprocessing.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/low_quality_processing/Image_preprocessing.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/low_quality_processing/check_contour_detection.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/low_quality_processing/constants.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/low_quality_processing/image_character_cropping.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/low_quality_processing/image_preprocessing.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/low_quality_processing/image_utils.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/low_quality_processing/padding_output_json.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/management/commands/load_data.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/management/resources/training_default_model.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/predict_keras.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/purge_data/purge.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/purge_data/serializers.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/remove_line.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/tasks.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/tests.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/utils/constants.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/utils/dir_utils.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/utils/models_cleaning_scripts.py">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/utils/other_utils.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/classifier/views.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/icr_backend/settings/development.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/icr_backend/urls.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/miniconda3/envs/image_processing_proj_env/lib/python3.6/site-packages/channels/management/commands/runserver.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/miniconda3/envs/image_processing_proj_env/lib/python3.6/site-packages/django/core/handlers/base.py">
           <value>
             <set />
           </value>

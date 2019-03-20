@@ -14,7 +14,7 @@
         <input #fileInput type="file" id="avatar" accept="image/* | application/pdf" name="photo" (change)="onFileChange($event)">
       </label>
       <label for="avatar" class="custom-file-download">
-        <a href="{{ processed_image }}" download>Download file</a>
+        <a href="{{ processed_image }}" target="_blank" download>Download file</a>
       </label>
     </div>
     <div class="image-operation-selection">
@@ -40,20 +40,19 @@
     </div>
     <div class="wrapper">
       <div class="leftcolumn">
-        <div class="input_image_container">
-          <div id="image-file">
-            <img *ngIf="!enableTiff" class="form-image" alt="logo" />
-          </div>
 
-          <!-- <div *ngIf="image_file;else defaultimage">
-            <img [src]="image_file">
+        <div class="input_image_container">
+          <div *ngIf="image_file;else defaultimage" id="image-file">
+            <img *ngIf="!enableTiff" [src]="image_file">
           </div>
           <ng-template #defaultimage>
             <img [src]="default_image">
-          </ng-template> -->
+          </ng-template>
         </div>
+
       </div>
       <div class="rightcolumn">
+
         <div class="input_image_container">
           <div *ngIf="processed_image;else defaulttext">
             <img [src]="processed_image">
@@ -62,6 +61,7 @@
             <div><b> Output Result </b></div>
           </ng-template>
         </div>
+        
       </div>
     </div>
   </mat-sidenav-content>

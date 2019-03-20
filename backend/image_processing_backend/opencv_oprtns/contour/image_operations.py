@@ -23,6 +23,9 @@ def find_contours_in_image(image, opencv_image=False, join_lines=False, kernal=5
         kernel = np.ones((1, 5), np.uint8)  # note this is a horizontal kernel
         morphed = cv2.morphologyEx(morphed, cv2.MORPH_CLOSE, kernel, iterations=2)
 
+        kernel = np.ones((5, 1), np.uint8)  # note this is a vertical kernel
+        morphed = cv2.morphologyEx(morphed, cv2.MORPH_CLOSE, kernel, iterations=1)
+
     # (2) Find the contours
     image, cnts, hierarchy = cv2.findContours(morphed, retrievelmode, approximation_method)
 
@@ -38,8 +41,9 @@ def draw_cordinates(image, contours, colors=(0, 0, 0), index=-1, thickness=2,
 
     if len(cnts) > index:
         cv2.drawContours(img, cnts, index, colors, thickness)
+        print(cv2.contourArea(cnts[index]))
     else:
-        raise ValueError('Index range is greater than total {} contours detected'.format(len(cnts)))
+        raise ValueError('Index range is greater than total,  {} - contours detected'.format(len(cnts)))
     # cv2.drawContours(img, cnts, -1, (0,255,0), 5)
 
     return img

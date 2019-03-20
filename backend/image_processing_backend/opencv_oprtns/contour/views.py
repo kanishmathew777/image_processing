@@ -49,7 +49,7 @@ class ContourDetection(APIView):
             except Exception as e:
                 return Response(str(e), status=status.HTTP_406_NOT_ACCEPTABLE)
 
-            image_path = '{}_contour.{}'.format(str(file_serializer.data['file']).split('.')[0],
+            image_path = '{}_contour.png'.format(str(file_serializer.data['file']).split('.')[0],
                                                 str(file_serializer.data['file']).split('.')[1])
             save_file_path = '{}{}'.format(settings.BASE_DIR, image_path)
 
