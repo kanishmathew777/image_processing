@@ -16,6 +16,9 @@ import { PageNotFoundComponent } from './notfound.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { CanvasMoveComponent } from './canvas-move/canvas-move.component';
+import { ImageCanvasComponent } from './image-canvas/image-canvas.component';
+import { ImageCanvasRectComponent } from './image-canvas-rect/image-canvas-rect.component';
 
 
 @NgModule({
@@ -27,7 +30,10 @@ import { ToastrModule } from 'ngx-toastr';
     ContourComponent,
     VerticalLineComponent,
     HorizontalLineComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CanvasMoveComponent,
+    ImageCanvasComponent,
+    ImageCanvasRectComponent
 
   ],
   imports: [
