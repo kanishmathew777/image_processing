@@ -19,6 +19,11 @@ export class ImageCanvasRectComponent implements OnInit {
   end_coordinates = { x: null, y: null };
   mouse_down = false;
 
+  image_width = null;
+  image_height = null;
+
+  box_index = 0;
+
   boudingbox = new ImageBoundingBoxes([])
 
   @ViewChild('myCanvas') public canvas: ElementRef;
@@ -27,13 +32,12 @@ export class ImageCanvasRectComponent implements OnInit {
   private cx: CanvasRenderingContext2D;
 
   ngOnInit() {
-
-    console.log(this.boudingbox)
   }
 
-  onFileChange(event) {
+  public onFileChange(event) {
     this.image_file = null;
-    let w, h = 0;
+    this.image_width = 0;
+    this.image_height = 0;
     if (event.target.files.length > 0) {
       let files = event.target.files;
       if (files) {
@@ -44,11 +48,11 @@ export class ImageCanvasRectComponent implements OnInit {
           var img = new Image();
           img.src = e.target.result;
           img.onload = () => {
-            w = img.width;
-            h = img.height;
+            this.image_width = img.width;
+            this.image_height = img.height;
 
-            this.canvas_view(w, h, e)
-            console.log(`image width-${w} height-${h}`)
+            this.canvas_view()
+            console.log(`image width-${this.image_width} height-${this.image_height}`)
           }
         }
         this.file_content = event.target.files[0];
@@ -58,25 +62,30 @@ export class ImageCanvasRectComponent implements OnInit {
     }
   }
 
-  canvas_view(width, height, e) {
+  private canvas_view() {
+    // this.cx.clearRect(0, 0, this.image_width, this.image_height);
     const canvasEl: HTMLCanvasElement = this.canvas.nativeElement;
     this.cx = canvasEl.getContext('2d');
 
-    canvasEl.width = width;
-    canvasEl.height = height;
+    canvasEl.width = this.image_width;
+    canvasEl.height = this.image_height;
 
     this.cx.lineWidth = 3;
     this.cx.lineCap = 'round';
     this.cx.strokeStyle = '#000';
 
     var img = new Image();
-    img.src = e.target.result;
-    this.cx.drawImage(img, 0, 0);
+    img.onload = () => {
+      this.cx.drawImage(img, 0, 0);
+      this.load_rectangles();
+      this.CheckUncheckView();
+    }
+    img.src = this.image_file;
 
     this.captureEvents(canvasEl);
   }
 
-  captureEvents(canvasEl: HTMLCanvasElement) {
+  private captureEvents(canvasEl: HTMLCanvasElement) {
 
     const MouseUpMove = fromEvent(canvasEl, 'mouseup');
     MouseUpMove.subscribe((evt: MouseEvent) => {
@@ -102,6 +111,7 @@ export class ImageCanvasRectComponent implements OnInit {
     });
 
   }
+
   private drawOnCanvas() {
     if (!this.cx) { return; }
 
@@ -114,7 +124,6 @@ export class ImageCanvasRectComponent implements OnInit {
       this.cx.beginPath();
       let width = this.end_coordinates.x - this.start_coordinates.x;
       let height = this.end_coordinates.y - this.start_coordinates.y;
-      console.log(width, height)
       if (width >= 0 && height >= 0)
         this.cx.rect(this.start_coordinates.x, this.start_coordinates.y, width, height);
       else
@@ -124,6 +133,17 @@ export class ImageCanvasRectComponent implements OnInit {
       this.cx.lineWidth = 1;
       this.cx.stroke();
 
+      this.box_index += 1
+      //appending to the bounding boxes
+      this.boudingbox.appending_box_params(
+        this.box_index,
+        this.start_coordinates.x,
+        this.start_coordinates.y,
+        this.end_coordinates.x,
+        this.end_coordinates.y,
+        Math.abs(width),
+        Math.abs(height)
+      )
 
       // reset start and
       this.start_coordinates.x = null;
@@ -133,4 +153,44 @@ export class ImageCanvasRectComponent implements OnInit {
     }
   }
 
+  public deletebox(delindex) {
+    console.log(this.boudingbox.box_params);
+    var delete_index = this.boudingbox.box_params.findIndex(el => el.index === delindex);
+    console.log(delete_index);
+
+    this.boudingbox.box_params.splice(delete_index, 1);
+    this.canvas_view();
+
+  }
+
+  private load_rectangles() {
+    for (let val of this.boudingbox.box_params) {
+      this.cx.rect(val.start_point_x, val.start_point_y,
+        val.width, val.height);
+      this.cx.strokeStyle = 'black';
+      this.cx.lineWidth = 2;
+      this.cx.stroke();
+    }
+
+  }
+
+  public on_submit() {
+    console.log(this.boudingbox.box_params)
+  }
+
+  public CheckUncheckView() {
+    for (let val of this.boudingbox.box_params) {
+      this.cx.beginPath();
+
+      if (val.view)
+        this.cx.strokeStyle = 'yellow';
+      else
+        this.cx.strokeStyle = 'black';
+
+      this.cx.lineWidth = 2;
+      this.cx.strokeRect(val.start_point_x, val.start_point_y,
+        val.width, val.height);
+      this.cx.closePath();
+    }
+  }
 }
