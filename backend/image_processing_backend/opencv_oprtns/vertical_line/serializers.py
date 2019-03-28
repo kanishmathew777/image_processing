@@ -44,13 +44,13 @@ class ColorSerializer(serializers.DictField):
 class DrawContours(serializers.Serializer):
     index = serializers.IntegerField(allow_null=False, max_value=1000)
     thickness = serializers.IntegerField(min_value=1, max_value=100, allow_null=False)
-    sort_reverse = serializers.BooleanField(allow_null=False, default=True)
+    sort_reverse = serializers.BooleanField(default=True)
     color = ColorSerializer(required=True)
 
 
 class VerticalLineSerializer(FileSerializer):
     contour = DrawContours(required=True)
-    join_lines = serializers.BooleanField(allow_null=False)
+    join_lines = serializers.BooleanField()
     kernal = serializers.IntegerField(min_value=1, max_value=5)
     thresholding = serializers.ChoiceField(choices=thresholding_choices)
     approximation_method = serializers.ChoiceField(choices=approximation_choices)

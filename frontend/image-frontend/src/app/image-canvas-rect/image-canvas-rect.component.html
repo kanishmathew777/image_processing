@@ -25,7 +25,7 @@
   </tr>
   <tr *ngFor="let boxes of boudingbox.box_params">
     <td>{{ boxes.index }}</td>
-    <td><input type="checkbox" [(ngModel)]="boxes.view" (change)="CheckUncheckView()" >View<br></td>
+    <td><input type="checkbox" [(ngModel)]="boxes.view" (change)="CheckUncheckView()"><br></td>
     <td><button type="button" (click)="deletebox(boxes.index)">Delete</button></td>
     <td><input type="text" name="firstname" [(ngModel)]="boxes.value"></td>
   </tr>
