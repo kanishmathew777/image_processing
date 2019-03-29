@@ -15,22 +15,22 @@
   </div>
 </div>
 
-
-<table class="box_points_table">
-  <thead>
-    <tr>
-      <th>Index</th>
-      <th>View</th>
-      <th>Delete</th>
-      <th>Text input</th>
+<div class="box_points_container">
+  <table class="box_points_table">
+    <thead>
+      <tr>
+        <th>Index</th>
+        <th>View</th>
+        <th>Delete</th>
+        <th>Text input</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let boxes of boudingbox.box_params">
+      <td>{{ boxes.index }}</td>
+      <td><input type="checkbox" [(ngModel)]="boxes.view" (change)="CheckUncheckView()"><br></td>
+      <td><button type="button" (click)="deletebox(boxes.index)">Delete</button></td>
+      <td><input type="text" name="firstname" [(ngModel)]="boxes.value"></td>
     </tr>
-  </thead>
-  <tr *ngFor="let boxes of boudingbox.box_params">
-    <td>{{ boxes.index }}</td>
-    <td><input type="checkbox" [(ngModel)]="boxes.view" (change)="CheckUncheckView()"><br></td>
-    <td><button type="button" (click)="deletebox(boxes.index)">Delete</button></td>
-    <td><input type="text" name="firstname" [(ngModel)]="boxes.value"></td>
-  </tr>
-</table>
-
+  </table>
+</div>
 <canvas #myCanvas id="myCanvas" style="border:1px solid #000000;"></canvas>
