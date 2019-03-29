@@ -29,8 +29,11 @@
       <td>{{ boxes.index }}</td>
       <td><input type="checkbox" [(ngModel)]="boxes.view" (change)="CheckUncheckView()"><br></td>
       <td><button type="button" (click)="deletebox(boxes.index)">Delete</button></td>
-      <td><input type="text" name="firstname" [(ngModel)]="boxes.value"></td>
+      <td><input type="text" name="firstname" [(ngModel)]="boxes.value" (change)="update_text()"></td>
     </tr>
   </table>
 </div>
-<canvas #myCanvas id="myCanvas" style="border:1px solid #000000;"></canvas>
+<div class="canvas_container">
+  <canvas #backgroundCanvas id="bgCanvas" style="border:1px solid #000000;"></canvas>
+  <canvas #foregroundCanvas id="fgCanvas" style="border:1px solid #db0c0c;"></canvas>
+</div>

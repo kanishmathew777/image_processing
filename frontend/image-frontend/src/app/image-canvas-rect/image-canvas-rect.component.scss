@@ -84,3 +84,13 @@ td, th {
        width: 25%;
        min-height: 44px;
 }
+
+.canvas_container {
+    position: relative;
+}
+    
+.canvas_container #fgCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
