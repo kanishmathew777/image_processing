@@ -16,7 +16,7 @@ import { VerticalLineComponent } from './vertical_lines/vertical_lines.component
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/image_rect_canvas', pathMatch: 'full' },
   {
     path: 'dashboard', component: DashboardComponent,
   //   children: [

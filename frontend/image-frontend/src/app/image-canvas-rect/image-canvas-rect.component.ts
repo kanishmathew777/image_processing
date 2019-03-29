@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { fromEvent } from 'rxjs';
+import { saveAs } from "file-saver";
 
 import { ImageBoundingBoxes } from './image-canvas-rect.template';
 
@@ -21,6 +22,7 @@ export class ImageCanvasRectComponent implements OnInit {
 
   image_width = null;
   image_height = null;
+  image_name = null;
 
   box_index = 0;
 
@@ -31,20 +33,31 @@ export class ImageCanvasRectComponent implements OnInit {
 
   private cx: CanvasRenderingContext2D;
 
+  constructor() {
+  }
+
   ngOnInit() {
   }
 
-  public onFileChange(event) {
+  update_initial_values() {
+    this.image_name = null;
     this.image_file = null;
     this.image_width = 0;
     this.image_height = 0;
+    this.boudingbox = new ImageBoundingBoxes([]);
+  }
+
+  public onFileChange(event) {
+    this.update_initial_values()
     if (event.target.files.length > 0) {
       let files = event.target.files;
       if (files) {
+        this.image_name = event.target.files[0].name;
         let reader = new FileReader();
         reader.onload = (e: any) => {
           this.image_file = e.target.result;
           // get image width height
+
           var img = new Image();
           img.src = e.target.result;
           img.onload = () => {
@@ -63,7 +76,6 @@ export class ImageCanvasRectComponent implements OnInit {
   }
 
   private canvas_view() {
-    // this.cx.clearRect(0, 0, this.image_width, this.image_height);
     const canvasEl: HTMLCanvasElement = this.canvas.nativeElement;
     this.cx = canvasEl.getContext('2d');
 
@@ -87,8 +99,8 @@ export class ImageCanvasRectComponent implements OnInit {
 
   private captureEvents(canvasEl: HTMLCanvasElement) {
 
-    const MouseUpMove = fromEvent(canvasEl, 'mouseup');
-    MouseUpMove.subscribe((evt: MouseEvent) => {
+    const MouseUp = fromEvent(canvasEl, 'mouseup');
+    MouseUp.subscribe((evt: MouseEvent) => {
       if (this.mouse_down) {
         this.end_coordinates = {
           x: evt.layerX,
@@ -96,12 +108,14 @@ export class ImageCanvasRectComponent implements OnInit {
         };
         this.cx.fillRect(this.end_coordinates.x, this.end_coordinates.y, 5, 5);
         this.drawOnCanvas()
+        this.mouse_down = false;
+        this.canvas_view();
       }
     });
 
 
-    const MouseDownMove = fromEvent(canvasEl, 'mousedown');
-    MouseDownMove.subscribe((event: MouseEvent) => {
+    const MouseDown = fromEvent(canvasEl, 'mousedown');
+    MouseDown.subscribe((event: MouseEvent) => {
       this.mouse_down = true;
       this.start_coordinates = {
         x: event.layerX,
@@ -109,6 +123,57 @@ export class ImageCanvasRectComponent implements OnInit {
       };
       this.cx.fillRect(this.start_coordinates.x, this.start_coordinates.y, 5, 5);
     });
+
+    const MouseMove = fromEvent(canvasEl, 'mousemove');
+    MouseMove.subscribe((event: MouseEvent) => {
+
+      if (this.mouse_down == true) {
+        let width = event.layerX - this.start_coordinates.x;
+        let height = event.layerY - this.start_coordinates.y;
+
+        let { start_x, start_y, end_x, end_y } = this.start_end_points(width, height, 
+          this.start_coordinates.x, this.start_coordinates.y, event.layerX, event.layerY)
+
+        this.cx.beginPath();
+        this.cx.strokeStyle = 'black';
+        this.cx.lineWidth = 1;
+        this.cx.strokeRect(start_x, start_y, Math.abs(width), Math.abs(height));
+        this.cx.closePath();
+      }
+    });
+  }
+
+  private start_end_points(width, height, draw_start_x, draw_start_y, draw_end_x, draw_end_y) {
+    let start_x = null;
+    let start_y = null;
+    let end_x = null;
+    let end_y = null;
+    if (width >= 0 && height >= 0) {
+      start_x = draw_start_x;
+      start_y = draw_start_y;
+      end_x = draw_end_x;
+      end_y = draw_end_y;
+    }
+    else if (width < 0 && height < 0) {
+      start_x = draw_end_x;
+      start_y = draw_end_y;
+      end_x = draw_start_x;
+      end_y = draw_start_y;
+    }
+    else if (width > 0 && height < 0) {
+      start_x = draw_start_x;
+      start_y = draw_end_y;
+      end_x = draw_end_x;
+      end_y = draw_start_y;
+    }
+    else if (width < 0 && height > 0) {
+      start_x = draw_end_x;
+      start_y = draw_start_y;
+      end_x = draw_start_x;
+      end_y = draw_end_y;
+    }
+
+    return { start_x, start_y, end_x, end_y }
 
   }
 
@@ -121,31 +186,23 @@ export class ImageCanvasRectComponent implements OnInit {
       end_coordinates : ${this.end_coordinates.x}, ${this.end_coordinates.y}`)
 
       // draw boxes
-      this.cx.beginPath();
       let width = this.end_coordinates.x - this.start_coordinates.x;
       let height = this.end_coordinates.y - this.start_coordinates.y;
-      if (width >= 0 && height >= 0)
-        this.cx.rect(this.start_coordinates.x, this.start_coordinates.y, width, height);
-      else
-        this.cx.rect(this.end_coordinates.x, this.end_coordinates.y,
-          Math.abs(width), Math.abs(height));
-      this.cx.strokeStyle = 'black';
-      this.cx.lineWidth = 1;
-      this.cx.stroke();
+      let { start_x, start_y, end_x, end_y } = this.start_end_points(width, height, 
+        this.start_coordinates.x, this.start_coordinates.y, this.end_coordinates.x, this.end_coordinates.y)
 
       this.box_index += 1
       //appending to the bounding boxes
       this.boudingbox.appending_box_params(
-        this.box_index,
-        this.start_coordinates.x,
-        this.start_coordinates.y,
-        this.end_coordinates.x,
-        this.end_coordinates.y,
-        Math.abs(width),
-        Math.abs(height)
+        this.box_index, start_x, start_y, end_x, end_y, Math.abs(width), Math.abs(height)
       )
+      this.cx.beginPath();
+      this.cx.strokeStyle = 'black';
+      this.cx.lineWidth = 1;
+      this.cx.strokeRect(start_x, start_y, Math.abs(width), Math.abs(height));
+      this.cx.closePath();
 
-      // reset start and
+      // reset start and end coordiantes
       this.start_coordinates.x = null;
       this.start_coordinates.y = null;
       this.end_coordinates.x = null;
@@ -157,7 +214,7 @@ export class ImageCanvasRectComponent implements OnInit {
     console.log(this.boudingbox.box_params);
     var delete_index = this.boudingbox.box_params.findIndex(el => el.index === delindex);
     console.log(delete_index);
-
+    
     this.boudingbox.box_params.splice(delete_index, 1);
     this.canvas_view();
 
@@ -174,7 +231,27 @@ export class ImageCanvasRectComponent implements OnInit {
 
   }
 
-  public on_submit() {
+  public on_download() {
+    let download_json = [];
+    for (let val of this.boudingbox.box_params) {
+      download_json.push({
+        "start_x": val.start_point_x,
+        "start_y": val.start_point_y,
+        "end_x": val.end_point_x,
+        "end_y": val.end_point_y,
+        "width": val.width,
+        "height": val.height,
+        "value": val.value
+      })
+
+    }
+
+    let theJSON = JSON.stringify(download_json);
+    var blob = new Blob([theJSON], { type: 'text/json' });
+    if (this.image_name)
+      saveAs(blob, `${this.image_name}.json`);
+    else
+      saveAs(blob, `bounding_box.json`);
     console.log(this.boudingbox.box_params)
   }
 

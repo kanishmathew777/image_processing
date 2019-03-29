@@ -11,18 +11,20 @@
     <button class="custom-file-upload">Load bounding boxes </button>
   </div>
   <div class="submit-box-details">
-    <button class="custom-file-upload" (click)="on_submit()">Submit</button>
+    <button class="custom-file-upload" (click)="on_download()">Download</button>
   </div>
 </div>
 
 
 <table class="box_points_table">
-  <tr>
-    <th>Index</th>
-    <th>View</th>
-    <th>Delete</th>
-    <th>Text input</th>
-  </tr>
+  <thead>
+    <tr>
+      <th>Index</th>
+      <th>View</th>
+      <th>Delete</th>
+      <th>Text input</th>
+    </tr>
+  </thead>
   <tr *ngFor="let boxes of boudingbox.box_params">
     <td>{{ boxes.index }}</td>
     <td><input type="checkbox" [(ngModel)]="boxes.view" (change)="CheckUncheckView()"><br></td>

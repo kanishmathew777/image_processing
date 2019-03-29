@@ -50,7 +50,7 @@ class ContourDetection(APIView):
                 return Response(str(e), status=status.HTTP_406_NOT_ACCEPTABLE)
 
             image_path = '{}_contour.png'.format(str(file_serializer.data['file']).split('.')[0],
-                                                str(file_serializer.data['file']).split('.')[1])
+                                                 str(file_serializer.data['file']).split('.')[1])
             save_file_path = '{}{}'.format(settings.BASE_DIR, image_path)
 
             cv2.imwrite(save_file_path, contour_image)
@@ -67,4 +67,8 @@ class ContourDetection(APIView):
         serialized_data = json.dumps(dictionery_value)
         print(serialized_data)
 
-        return Response('errors', status=status.HTTP_400_BAD_REQUEST)
+        result = [{"index": 23, "start_point_x": 898, "start_point_y": 883, "end_point_x": 1122, "end_point_y": 1016,
+                   "width": 224, "height": 133, "view": False, "value": ""},
+                  {"index": 24, "start_point_x": 1029, "start_point_y": 630, "end_point_x": 1156, "end_point_y": 724,
+                   "width": 127, "height": 94, "view": False, "value": ""}]
+        return Response(result, status=status.HTTP_400_BAD_REQUEST)
