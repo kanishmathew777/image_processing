@@ -29,21 +29,21 @@
         <th>View</th>
         <th>Delete</th>
         <th>Text input</th>
-        <!-- <th>Box Type</th> -->
+        <th>Box Type</th>
       </tr>
     </thead>
-    <tr *ngFor="let boxes of boudingbox.box_params">
+    <tr *ngFor="let boxes of boudingbox.box_params; let i=index">
       <td>{{ boxes.index }}</td>
       <td><input type="checkbox" [(ngModel)]="boxes.view" (change)="CheckUncheckView()"><br></td>
       <td><button type="button" (click)="deletebox(boxes.index)">Delete</button></td>
       <td><input type="text" name="firstname" [(ngModel)]="boxes.value" (change)="update_text()"></td>
-      <!-- <td> -->
-      <!-- <div *ngFor="let box_opt of box_options">
-          <input name="box_type" type="radio" [value]="box_opt.value" [(ngModel)]="boxes.box_type"> {{box_opt.name}} <br>  
-        </div> -->
-      <!-- <input name="box_type" type="radio" [value]="box_options[]." [(ngModel)]="boxes.box_type"> 
-        <input name="box_type" type="radio" [value]="false" [(ngModel)]="boxes.box_type"> -->
-      <!-- </td> -->
+      <td>
+        <div *ngFor="let box_opt of box_options;">
+          <input name="test-{{i}}" type="radio" [value]="box_opt.value" [(ngModel)]="boxes.box_type">
+          {{box_opt.name}}
+          <br>
+        </div>
+      </td>
     </tr>
   </table>
 </div>

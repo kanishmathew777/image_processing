@@ -218,6 +218,7 @@ export class ImageCanvasRectComponent implements OnInit {
       this.boudingbox.appending_box_params(
         this.box_index, start_x, start_y, end_x, end_y, Math.abs(width), Math.abs(height)
       )
+      
       this.fgcx.beginPath();
       this.fgcx.strokeStyle = 'black';
       this.fgcx.lineWidth = 2;
