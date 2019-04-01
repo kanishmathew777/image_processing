@@ -81,7 +81,7 @@ td, th {
 .box_points_table th,
 .box_points_table td {
     display: inline-block;
-       width: 25%;
+       width: 20%;
        min-height: 44px;
 }
 
@@ -93,4 +93,19 @@ td, th {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.box_type_dropdown{
+    margin-top: 52px;
+    float: left;
+    margin-left: 35px;
+    padding: 7px 20px;
+    border-radius: 16px;
+    background: #dc6650;
+    color: #fff;
+    border: 2px solid #fdacb4;
+}
+
+.box_type_dropdown option{
+    padding: 10px 20px;
 }

@@ -2,7 +2,7 @@ import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { fromEvent } from 'rxjs';
 import { saveAs } from "file-saver";
 
-import { ImageBoundingBoxes } from './image-canvas-rect.template';
+import { ImageBoundingBoxes, box_options } from './image-canvas-rect.template';
 
 @Component({
   selector: 'app-image-canvas-rect',
@@ -18,6 +18,7 @@ export class ImageCanvasRectComponent implements OnInit {
 
   start_coordinates = { x: null, y: null };
   end_coordinates = { x: null, y: null };
+
   mouse_down = false;
 
   image_width = null;
@@ -25,6 +26,10 @@ export class ImageCanvasRectComponent implements OnInit {
   image_name = null;
 
   box_index = 0;
+
+  public box_options = box_options;
+
+  public json_box_type = "word";
 
   boudingbox = new ImageBoundingBoxes([])
 
@@ -254,6 +259,8 @@ export class ImageCanvasRectComponent implements OnInit {
   }
 
   public on_download() {
+
+    console.log(this.json_box_type)
     let download_json = [];
     for (let val of this.boudingbox.box_params) {
       download_json.push({
@@ -267,14 +274,16 @@ export class ImageCanvasRectComponent implements OnInit {
       })
 
     }
-
     let theJSON = JSON.stringify(download_json);
     var blob = new Blob([theJSON], { type: 'text/json' });
-    if (this.image_name)
-      saveAs(blob, `${this.image_name}.json`);
-    else
-      saveAs(blob, `bounding_box.json`);
-    console.log(this.boudingbox.box_params)
+    if (this.image_name) {
+      let trimmed_file_name = this.image_name.split('.').slice(0, -1).join('.')
+      saveAs(blob, `${this.json_box_type}-${trimmed_file_name}.json`);
+    }
+    else {
+      saveAs(blob, `${this.json_box_type}-bounding_box.json`);
+      console.log(this.boudingbox.box_params)
+    }
   }
 
   public CheckUncheckView() {

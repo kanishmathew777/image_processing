@@ -10,6 +10,12 @@
   <div class="load-box-points">
     <button class="custom-file-upload">Load bounding boxes </button>
   </div>
+
+  <select [(ngModel)]="json_box_type" class="box_type_dropdown">
+    <option value="word" selected>Word</option>
+    <option value="line">Line</option>
+  </select>
+
   <div class="submit-box-details">
     <button class="custom-file-upload" (click)="on_download()">Download</button>
   </div>
@@ -23,6 +29,7 @@
         <th>View</th>
         <th>Delete</th>
         <th>Text input</th>
+        <!-- <th>Box Type</th> -->
       </tr>
     </thead>
     <tr *ngFor="let boxes of boudingbox.box_params">
@@ -30,6 +37,13 @@
       <td><input type="checkbox" [(ngModel)]="boxes.view" (change)="CheckUncheckView()"><br></td>
       <td><button type="button" (click)="deletebox(boxes.index)">Delete</button></td>
       <td><input type="text" name="firstname" [(ngModel)]="boxes.value" (change)="update_text()"></td>
+      <!-- <td> -->
+      <!-- <div *ngFor="let box_opt of box_options">
+          <input name="box_type" type="radio" [value]="box_opt.value" [(ngModel)]="boxes.box_type"> {{box_opt.name}} <br>  
+        </div> -->
+      <!-- <input name="box_type" type="radio" [value]="box_options[]." [(ngModel)]="boxes.box_type"> 
+        <input name="box_type" type="radio" [value]="false" [(ngModel)]="boxes.box_type"> -->
+      <!-- </td> -->
     </tr>
   </table>
 </div>

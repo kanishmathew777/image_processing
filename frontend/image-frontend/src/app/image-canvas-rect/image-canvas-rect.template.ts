@@ -1,3 +1,12 @@
+export const box_options = [{
+    "name": "Line",
+    "value": "line"
+  }  ,
+  {
+    "name": "Word",
+    "word": "word"
+  }]
+
 interface BoundingBoxConfig {
     index: number,
     start_point_x: number,
@@ -11,7 +20,9 @@ interface BoundingBoxConfig {
 
     view: boolean,
 
-    value?: string
+    value?: string,
+
+    box_type?: string,
 }
 
 export class ImageBoundingBoxes {
@@ -24,7 +35,7 @@ export class ImageBoundingBoxes {
 
     public appending_box_params(index, start_point_x, start_point_y, 
         end_point_x, end_point_y, width, height,
-        view = false, value = "") {
+        view = false, value = "", box_type= box_options[0].value) {
 
         this.box_params.push({
             'index': index,
