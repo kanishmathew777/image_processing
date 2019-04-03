@@ -4,6 +4,9 @@ import { saveAs } from "file-saver";
 
 import { ImageBoundingBoxes, box_options } from './image-canvas-rect.template';
 
+import { form_1_boxes } from './template_1/template';
+import { form_2_boxes } from './template_2/template';
+
 @Component({
   selector: 'app-image-canvas-rect',
   templateUrl: './image-canvas-rect.component.html',
@@ -31,6 +34,8 @@ export class ImageCanvasRectComponent implements OnInit {
 
   public json_box_type = "word";
 
+  public form_no = "one";
+
   boudingbox = new ImageBoundingBoxes([])
 
   @ViewChild('backgroundCanvas') public bgcanvas: ElementRef;
@@ -52,6 +57,50 @@ export class ImageCanvasRectComponent implements OnInit {
     this.image_width = 0;
     this.image_height = 0;
     this.boudingbox = new ImageBoundingBoxes([]);
+    this.box_index = 0;
+  }
+
+  private return_template_list(form_no, box_type, form_template_no) {
+    let output_text_list = []
+    console.log(form_no, form_template_no, box_type)
+
+    if (form_no == "one") {
+      let test_data_as_dict = form_1_boxes[form_template_no][box_type]
+      for (let [key, value] of Object.entries(test_data_as_dict)) {
+        output_text_list.push(value)
+      }
+    } else if (form_no == "two") {
+      let test_data_as_dict = form_2_boxes[form_template_no][box_type]
+      for (let [key, value] of Object.entries(test_data_as_dict)) {
+        output_text_list.push(value)
+      }
+    }
+
+    return output_text_list
+  }
+
+  private update_box_params(text_list) {
+    this.boudingbox.box_params.forEach((item, index) => {
+      Object.assign(item.value = text_list[index]);
+    });
+
+    this.update_text()
+  }
+
+  public load_form_template_date() {
+    if (this.image_file) {
+
+      let trimmed_file_name = this.image_name.split('.').slice(0, -1).join('.')
+      let template: String[] = trimmed_file_name.split('_')
+      let form_template_no : any = template[template.length - 1]
+
+      let updated_form_no : any = (5 - form_template_no)
+      let output_text_list = this.return_template_list(this.form_no, this.json_box_type, updated_form_no)
+      console.log(output_text_list)
+      this.update_box_params(output_text_list)
+
+    }
+
   }
 
   public onFileChange(event) {
@@ -60,6 +109,7 @@ export class ImageCanvasRectComponent implements OnInit {
       let files = event.target.files;
       if (files) {
         this.image_name = event.target.files[0].name;
+
         let reader = new FileReader();
         reader.onload = (e: any) => {
           this.image_file = e.target.result;
@@ -218,7 +268,7 @@ export class ImageCanvasRectComponent implements OnInit {
       this.boudingbox.appending_box_params(
         this.box_index, start_x, start_y, end_x, end_y, Math.abs(width), Math.abs(height)
       )
-      
+
       this.fgcx.beginPath();
       this.fgcx.strokeStyle = 'black';
       this.fgcx.lineWidth = 2;
@@ -301,5 +351,10 @@ export class ImageCanvasRectComponent implements OnInit {
         val.width, val.height);
       this.fgcx.closePath();
     }
+  }
+
+  public delete_all(){
+    this.boudingbox = new ImageBoundingBoxes([]);
+    this.fgcx.clearRect(0, 0, this.image_width, this.image_height);
   }
 }
