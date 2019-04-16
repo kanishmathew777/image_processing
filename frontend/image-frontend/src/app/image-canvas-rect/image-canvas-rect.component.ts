@@ -6,6 +6,7 @@ import { ImageBoundingBoxes, box_options } from './image-canvas-rect.template';
 
 import { form_1_boxes } from './template_1/template';
 import { form_2_boxes } from './template_2/template';
+import { form_3_boxes } from './template_3/template';
 
 @Component({
   selector: 'app-image-canvas-rect',
@@ -71,6 +72,12 @@ export class ImageCanvasRectComponent implements OnInit {
       }
     } else if (form_no == "two") {
       let test_data_as_dict = form_2_boxes[form_template_no][box_type]
+      for (let [key, value] of Object.entries(test_data_as_dict)) {
+        output_text_list.push(value)
+      }
+    } else if (form_no == "three") {
+      console.log("Haiiii")
+      let test_data_as_dict = form_3_boxes[form_template_no][box_type]
       for (let [key, value] of Object.entries(test_data_as_dict)) {
         output_text_list.push(value)
       }
